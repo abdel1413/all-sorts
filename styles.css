@@ -1,0 +1,141 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --gray-00: #ffffff;
+  --gray-05: #f5f6f7;
+  --gray-15: #d0d0d5;
+  --gray-75: #3b3b4f;
+  --gray-85: #1b1b32;
+  --gray-90: #0a0a23;
+  --blue-50: #198eee;
+  --error: #a94442;
+  --danger-color: #850000;
+  --danger-background: #ffadad;
+  --gradient-first-color: #fecc4c;
+  --gradient-scond-color: #ffac33;
+  --border-color: #feac32;
+}
+
+body {
+  font-size: 18px;
+  background-color: var(--gray-85);
+  color: var(--gray-05);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin: 30px auto;
+}
+h2 {
+  margin: 15px 0;
+}
+
+form {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+}
+
+fieldset {
+  border: 0 none;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+fieldset div {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.bracket,
+.comma {
+  font-size: 2.3rem;
+}
+
+form .comma {
+  margin-left: 2px;
+}
+
+select {
+  height: 38px;
+  width: 50px;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  text-align: center;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 16px;
+  width: 100%;
+  margin-top: 15px;
+  background-image: linear-gradient(
+    var(--gradient-first-color),
+    var(--gradient-scond-color)
+  );
+  border: 3px solid var(--border-color);
+  font-size: 23px;
+  cursor: pointer;
+}
+
+select:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--blue-50);
+}
+
+.output-container {
+  margin-top: 25px;
+  width: 90%;
+  min-height: 55px;
+  text-align: center;
+
+  overflow-wrap: break-word;
+}
+
+.output-array {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+.output-value {
+  font-size: 2em;
+}
+
+.alert {
+  background-color: var(--danger-background);
+  border: var(--danger-color) 3px solid;
+  color: var(--danger-color);
+}
+
+@media (min-width: 550px) {
+  form,
+  .output-container {
+    max-width: 480px;
+  }
+  .fielset {
+    max-width: 400px;
+  }
+  .output-array {
+    max-width: 450px;
+  }
+}
