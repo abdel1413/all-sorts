@@ -36,7 +36,6 @@ const bubbleSort = (array) => {
 };
 
 const selectionSort = (array) => {
-  console.log(array);
   for (let i = 0; i < array.length; i++) {
     let minIndex = i;
     for (let j = i + 1; j < array.length; j++) {
@@ -50,5 +49,21 @@ const selectionSort = (array) => {
     array[i] = array[minIndex];
     array[minIndex] = temp;
   }
+};
+
+//for insertion for loop and while loop
+//the first values is consided as sorted
+//and we just need to loop thru the rest of array
+const insertionSort = (array) => {
+  for (let i = 1; i < array.length; i++) {
+    let currValue = array[i];
+    let j = i + 1;
+    while (j >= 0 && array[j] > currValue) {
+      array[j + 1] = array[j];
+      j--;
+    }
+    array[j + 1] = currValue;
+  }
+  return array;
 };
 sortButton.addEventListener("click", sortInputValues);
