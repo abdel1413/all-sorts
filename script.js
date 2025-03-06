@@ -41,7 +41,7 @@ const updateUI = (array = []) => {
     }, 5500);
     setTimeout(() => {
       insertionSortElement.innerText = "Insertion Sort Ouputs:";
-    }, 6500);
+    }, 7000);
     setTimeout(() => {
       insertSortOutputs.innerText = value;
     }, 7500);
