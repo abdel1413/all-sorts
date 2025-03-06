@@ -93,4 +93,14 @@ const insertionSort = (array) => {
   }
   return array;
 };
+
+//can also use built-in sort() method
+//by call sot() on inputValuesArray
+
+// inputValuesArray.sort((a, b) => {
+//   return a - b;
+//   //ie: if a-b < 0, a is returned
+//   //if a-b>0, b is returned
+//   //if a-b =0, eith one is returned as both are equal
+// });
 sortButton.addEventListener("click", sortInputValues);
